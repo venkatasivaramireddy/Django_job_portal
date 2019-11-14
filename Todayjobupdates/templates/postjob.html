@@ -1,0 +1,27 @@
+{% include "header.html" %}
+<div align="center">
+<h1>Job Posting Form </h1>
+<form action="{% url "savejob" %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <th> Job Title     : {{ jobform.title}}</th>
+        </tr>
+        <tr>
+            <th  width="200" height="100">Description: {{ jobform.description}}</th>
+        </tr>
+        <tr>
+            <th> Job Image   : {{ jobform.image}}</th>
+        </tr>
+    </table>
+<br>
+    <button type="submit" style="background: #0062cc; text-align: center; font-size: xx-large" >Submit</button>
+</form>
+</div>
+<br><br><br><br><br>
+<br>
+<br>
+{% include 'footer.html' %}
+<br>
+<br>
+<br>
